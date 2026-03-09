@@ -552,12 +552,13 @@ img {
 /* --- Bottom Navigation --- */
 .bottom-nav {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
   height: var(--bottom-nav-height);
   background-color: var(--color-bg-white);
   border-top: 1px solid var(--color-border-light);
+  border-radius: 16px;
   display: flex;
   z-index: 1000;
 }
