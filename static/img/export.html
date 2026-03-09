@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Export Activity Entry Image</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      color: #333;
+    }
+    #imageContainer {
+      margin: 20px 0;
+      border: 1px dashed #ccc;
+      padding: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #0066CC;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0055AA;
+    }
+    #canvas {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>活动报名图片导出工具</h1>
+  <p>点击下方按钮将SVG导出为PNG图片</p>
+
+  <div id="imageContainer">
+    <img id="svgImage" src="activity-entry.svg" width="388" height="120">
+  </div>
+
+  <button onclick="exportToPNG()">导出为PNG (388x120)</button>
+  <canvas id="canvas" width="388" height="120"></canvas>
+
+  <script>
+    function exportToPNG() {
+      const svg = document.getElementById('svgImage');
+      const canvas = document.getElementById('canvas');
+      const ctx = canvas.getContext('2d');
+
+      // Load the SVG and draw to canvas
+      const img = new Image();
+      img.onload = function() {
+        ctx.drawImage(img, 0, 0, 388, 120);
+
+        // Export as PNG
+        const pngUrl = canvas.toDataURL('image/png');
+
+        // Create download link
+        const link = document.createElement('a');
+        link.download = 'activity-entry.png';
+        link.href = pngUrl;
+        link.click();
+      };
+
+      // Add timestamp to bypass cache
+      img.src = 'activity-entry.svg?t=' + new Date().getTime();
+    }
+  </script>
+</body>
+</html>

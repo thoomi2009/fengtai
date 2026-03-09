@@ -1,0 +1,331 @@
+/* ========================================
+   Services Page Styles
+   ======================================== */
+
+/* --- Services Layout --- */
+.services-layout {
+  display: flex;
+  height: calc(100vh - 44px - var(--bottom-nav-height));
+  overflow: hidden;
+}
+
+/* --- Sidebar --- */
+.services-sidebar {
+  width: 90px;
+  background-color: var(--color-bg-gray);
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+.category-list {
+  padding: var(--spacing-sm) 0;
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-sm);
+  text-decoration: none;
+  color: var(--color-text-secondary);
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.category-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 0;
+  background-color: var(--color-primary);
+  transition: height var(--transition-fast);
+}
+
+.category-item.active {
+  color: var(--color-primary);
+  background-color: var(--color-bg-white);
+}
+
+.category-item.active::after {
+  height: 24px;
+}
+
+.category-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-xs);
+  border-radius: var(--radius-sm);
+}
+
+.category-item:not(.active) .category-icon {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.category-item.active .category-icon {
+  background-color: rgba(0, 102, 204, 0.1);
+}
+
+.category-name {
+  font-size: var(--font-size-mini);
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* --- Content Area --- */
+.services-content {
+  flex: 1;
+  overflow-y: auto;
+  background-color: var(--color-bg-primary);
+}
+
+.content-header {
+  padding: var(--spacing-lg);
+  background-color: var(--color-bg-white);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.content-title {
+  font-size: var(--font-size-subtitle);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.content-desc {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+/* --- Service List --- */
+.service-list {
+  padding: var(--spacing-lg);
+}
+
+.service-card {
+  background-color: var(--color-bg-white);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.service-card:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Service Card Header --- */
+.service-card-header {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.service-logo {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background-color: var(--color-bg-gray);
+}
+
+.service-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.service-name {
+  font-size: var(--font-size-h3);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.service-desc {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin-bottom: var(--spacing-sm);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.service-tags .tag {
+  font-size: var(--font-size-mini);
+  color: var(--color-primary);
+  padding: 2px 6px;
+  background-color: rgba(0, 102, 204, 0.1);
+  border-radius: 2px;
+}
+
+/* --- Service Card Footer --- */
+.service-card-footer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.contact-link {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.contact-link svg {
+  flex-shrink: 0;
+}
+
+.consult-btn {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-size: var(--font-size-small);
+}
+
+/* --- Modal --- */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-bg-white);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  max-height: 80vh;
+  overflow-y: auto;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* --- Modal Header --- */
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.modal-title {
+  font-size: var(--font-size-h3);
+  font-weight: 600;
+}
+
+.modal-close {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--color-text-tertiary);
+  cursor: pointer;
+}
+
+.modal-close:active {
+  color: var(--color-text-primary);
+}
+
+/* --- Consult Form --- */
+.consult-form {
+  padding: var(--spacing-lg);
+}
+
+.consult-form .form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.consult-form .form-select,
+.consult-form .form-input,
+.consult-form .form-textarea {
+  background-color: var(--color-bg-gray);
+  border: none;
+  padding: var(--spacing-md);
+}
+
+.consult-form .form-textarea {
+  min-height: 80px;
+  resize: none;
+}
+
+.consult-form .btn-primary {
+  margin-top: var(--spacing-md);
+}
+
+/* --- Toast --- */
+.toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-body);
+  z-index: 3000;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}

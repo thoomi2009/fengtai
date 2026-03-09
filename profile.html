@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>个人中心 - 丰台内外贸一体化服务平台</title>
+  <link rel="stylesheet" href="static/css/common.css">
+  <link rel="stylesheet" href="static/css/profile.css">
+</head>
+<body>
+  <!-- Navigation Header -->
+  <header class="nav-bar">
+    <div class="nav-bar-content">
+      <h1 class="nav-bar-title">个人中心</h1>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="page profile-page">
+    <!-- User Profile Card -->
+    <div class="profile-card" id="loggedInProfile">
+      <div class="profile-header">
+        <div class="profile-avatar">
+          <img src="static/images/default-avatar.png" alt="用户头像">
+        </div>
+        <div class="profile-info">
+          <h2 class="profile-name">外贸企业用户</h2>
+          <p class="profile-phone">138****8888</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Prompt Card (Hidden when logged in) -->
+    <div class="login-prompt-card hidden" id="loginPrompt">
+      <div class="login-prompt-content">
+        <div class="login-prompt-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <p class="login-prompt-text">登录后查看更多内容</p>
+        <a href="login.html" class="btn btn-primary">立即登录</a>
+      </div>
+    </div>
+
+    <!-- Function Menu List -->
+    <div class="menu-section">
+      <div class="menu-list">
+        <a href="my-favorites.html" class="menu-item">
+          <div class="menu-item-icon menu-icon-favorites">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+            </svg>
+          </div>
+          <span class="menu-item-title">我的收藏</span>
+          <svg class="menu-item-arrow" width="6" height="6" viewBox="0 0 6 6">
+            <path d="M1 1L5 3L1 5" fill="none" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        </a>
+
+        <a href="my-registrations.html" class="menu-item">
+          <div class="menu-item-icon menu-icon-registrations">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/>
+              <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+            </svg>
+          </div>
+          <span class="menu-item-title">我的报名</span>
+          <svg class="menu-item-arrow" width="6" height="6" viewBox="0 0 6 6">
+            <path d="M1 1L5 3L1 5" fill="none" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        </a>
+
+        <a href="my-messages.html" class="menu-item">
+          <div class="menu-item-icon menu-icon-messages">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+            </svg>
+          </div>
+          <span class="menu-item-title">我的留言</span>
+          <svg class="menu-item-arrow" width="6" height="6" viewBox="0 0 6 6">
+            <path d="M1 1L5 3L1 5" fill="none" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        </a>
+
+        <a href="my-applications.html" class="menu-item">
+          <div class="menu-item-icon menu-icon-applications">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+              <polyline points="14,2 14,8 20,8"/>
+              <path d="M9 15h6"/>
+              <path d="M9 11h6"/>
+              <path d="M9 19h6"/>
+            </svg>
+          </div>
+          <span class="menu-item-title">我的申请</span>
+          <svg class="menu-item-arrow" width="6" height="6" viewBox="0 0 6 6">
+            <path d="M1 1L5 3L1 5" fill="none" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- More Menu List -->
+    <div class="menu-section">
+      <div class="menu-list">
+        <a href="about.html" class="menu-item">
+          <div class="menu-item-icon menu-icon-about">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="16" x2="12" y2="12"/>
+              <line x1="12" y1="8" x2="12.01" y2="8"/>
+            </svg>
+          </div>
+          <span class="menu-item-title">关于我们</span>
+          <svg class="menu-item-arrow" width="6" height="6" viewBox="0 0 6 6">
+            <path d="M1 1L5 3L1 5" fill="none" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        </a>
+
+        <a href="feedback.html" class="menu-item">
+          <div class="menu-item-icon menu-icon-feedback">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+            </svg>
+          </div>
+          <span class="menu-item-title">意见建议</span>
+          <svg class="menu-item-arrow" width="6" height="6" viewBox="0 0 6 6">
+            <path d="M1 1L5 3L1 5" fill="none" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        </a>
+
+        <a href="customer-service.html" class="menu-item">
+          <div class="menu-item-icon menu-icon-service">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+          </div>
+          <span class="menu-item-title">人工客服</span>
+          <svg class="menu-item-arrow" width="6" height="6" viewBox="0 0 6 6">
+            <path d="M1 1L5 3L1 5" fill="none" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Logout Button (Visible when logged in) -->
+    <div class="logout-section" id="logoutSection">
+      <button class="btn btn-outline btn-block" id="logoutBtn">退出登录</button>
+    </div>
+  </main>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <a href="index.html" class="bottom-nav-item">
+      <svg class="bottom-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+        <polyline points="9,22 9,12 15,12 15,22"/>
+      </svg>
+      <span>首页</span>
+    </a>
+    <a href="news-list.html" class="bottom-nav-item">
+      <svg class="bottom-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
+      </svg>
+      <span>行业资讯</span>
+    </a>
+    <a href="services.html" class="bottom-nav-item">
+      <svg class="bottom-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+        <path d="M2 17l10 5 10-5"/>
+        <path d="M2 12l10 5 10-5"/>
+      </svg>
+      <span>出海服务</span>
+    </a>
+    <a href="classroom-list.html" class="bottom-nav-item">
+      <svg class="bottom-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+        <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+      </svg>
+      <span>出海课堂</span>
+    </a>
+    <a href="profile.html" class="bottom-nav-item active">
+      <svg class="bottom-nav-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+        <circle cx="12" cy="7" r="4"/>
+      </svg>
+      <span>个人中心</span>
+    </a>
+  </nav>
+
+  <script src="static/js/profile.js"></script>
+</body>
+</html>

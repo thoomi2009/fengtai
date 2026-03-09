@@ -1,0 +1,313 @@
+/* ========================================
+   News Detail Page Styles
+   ======================================== */
+
+/* --- Navigation --- */
+.icon-btn {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: var(--color-text-primary);
+}
+
+.icon-btn:active {
+  opacity: 0.6;
+}
+
+/* --- Article Page --- */
+.article-page {
+  padding-bottom: 60px;
+}
+
+/* --- Article --- */
+.article {
+  background-color: var(--color-bg-white);
+}
+
+/* --- Article Cover --- */
+.article-cover {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.article-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- Article Header --- */
+.article-header {
+  padding: var(--spacing-lg);
+}
+
+.article-title {
+  font-size: var(--font-size-title);
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.article-category {
+  font-size: var(--font-size-small);
+  color: var(--color-primary);
+  padding: 3px 8px;
+  background-color: rgba(0, 102, 204, 0.1);
+  border-radius: 2px;
+}
+
+.article-time {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.article-views {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+  margin-left: auto;
+}
+
+/* --- Article Body --- */
+.article-body {
+  padding: 0 var(--spacing-lg) var(--spacing-xl);
+  font-size: var(--font-size-body);
+  line-height: 1.8;
+  color: var(--color-text-primary);
+}
+
+.article-body p {
+  margin-bottom: var(--spacing-lg);
+  text-align: justify;
+}
+
+.article-body h2 {
+  font-size: var(--font-size-subtitle);
+  font-weight: 600;
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-primary);
+}
+
+.article-body h3 {
+  font-size: var(--font-size-h3);
+  font-weight: 600;
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text-primary);
+}
+
+.article-body ul,
+.article-body ol {
+  margin-bottom: var(--spacing-lg);
+  padding-left: var(--spacing-xl);
+}
+
+.article-body li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.article-body img {
+  width: 100%;
+  margin: var(--spacing-lg) 0;
+  border-radius: var(--radius-sm);
+}
+
+.article-body blockquote {
+  margin: var(--spacing-lg) 0;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: var(--color-bg-gray);
+  border-left: 3px solid var(--color-primary);
+  color: var(--color-text-secondary);
+}
+
+.article-body code {
+  padding: 2px 6px;
+  background-color: var(--color-bg-gray);
+  border-radius: 3px;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+.article-body pre {
+  margin: var(--spacing-md) 0;
+  padding: var(--spacing-md);
+  background-color: var(--color-bg-gray);
+  border-radius: var(--radius-sm);
+  overflow-x: auto;
+}
+
+.article-body pre code {
+  padding: 0;
+  background: none;
+}
+
+/* --- Article Footer --- */
+.article-footer {
+  padding: 0 var(--spacing-lg) var(--spacing-lg);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.article-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  padding-top: var(--spacing-md);
+}
+
+.tag {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+  padding: 4px 10px;
+  background-color: var(--color-bg-gray);
+  border-radius: var(--radius-full);
+}
+
+/* --- Related Section --- */
+.related-section {
+  margin-top: var(--spacing-lg);
+  padding: 0 var(--spacing-lg) var(--spacing-lg);
+}
+
+.related-section .section-title {
+  font-size: var(--font-size-h3);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+}
+
+.related-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.related-item {
+  display: flex;
+  gap: var(--spacing-md);
+  background-color: var(--color-bg-white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+.related-item-cover {
+  width: 100px;
+  height: 70px;
+  flex-shrink: 0;
+}
+
+.related-item-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.related-item-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--spacing-sm) var(--spacing-md) var(--spacing-sm) 0;
+}
+
+.related-item-title {
+  font-size: var(--font-size-body);
+  font-weight: 500;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.related-item-time {
+  font-size: var(--font-size-mini);
+  color: var(--color-text-tertiary);
+}
+
+/* --- Action Bar --- */
+.action-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  background-color: var(--color-bg-white);
+  border-top: 1px solid var(--color-border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: var(--spacing-sm) var(--spacing-xl);
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.action-btn.active {
+  color: var(--color-error);
+}
+
+.action-btn.active .action-btn-icon {
+  fill: var(--color-error);
+}
+
+.action-btn-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform var(--transition-fast);
+}
+
+.action-btn:active .action-btn-icon {
+  transform: scale(1.1);
+}
+
+.action-btn-text {
+  font-size: var(--font-size-mini);
+}
+
+/* --- Favorite Animation --- */
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.action-btn.active .action-btn-icon {
+  animation: heartBeat 0.3s ease;
+}

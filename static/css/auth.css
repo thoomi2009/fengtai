@@ -1,0 +1,257 @@
+/* ========================================
+   Authentication Page Styles
+   ======================================== */
+
+.auth-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  padding: var(--spacing-xxl) var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* --- Auth Header --- */
+.auth-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xxl);
+  color: #fff;
+}
+
+.auth-logo {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--spacing-md);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.auth-title {
+  font-size: var(--font-size-h3);
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.auth-subtitle {
+  font-size: var(--font-size-body);
+  opacity: 0.8;
+}
+
+/* --- Auth Form Card --- */
+.auth-form-card {
+  background-color: var(--color-bg-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Auth Tabs --- */
+.auth-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--color-border-light);
+  margin-bottom: var(--spacing-lg);
+}
+
+.auth-tab {
+  flex: 1;
+  padding: var(--spacing-md);
+  background: none;
+  border: none;
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.auth-tab.active {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.auth-tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background-color: var(--color-primary);
+  border-radius: 1px;
+}
+
+/* --- Auth Form --- */
+.auth-form {
+  margin-bottom: var(--spacing-lg);
+}
+
+.auth-form .form-input {
+  background-color: var(--color-bg-gray);
+  border: none;
+  padding: var(--spacing-md);
+}
+
+.auth-form .btn-primary {
+  margin-top: var(--spacing-lg);
+}
+
+/* --- Verify Code Group --- */
+.verify-code-group {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.verify-code-group .form-input {
+  flex: 1;
+}
+
+.verify-code-btn {
+  flex-shrink: 0;
+  padding: 0 var(--spacing-md);
+  font-size: var(--font-size-small);
+  white-space: nowrap;
+}
+
+.verify-code-btn:disabled {
+  opacity: 0.5;
+}
+
+/* --- Password Input Group --- */
+.password-input-group {
+  position: relative;
+}
+
+.password-input-group .form-input {
+  padding-right: 48px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: var(--spacing-md);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--color-text-tertiary);
+  cursor: pointer;
+}
+
+.password-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+.eye-closed {
+  display: none;
+}
+
+.password-toggle.show-closed .eye-open {
+  display: none;
+}
+
+.password-toggle.show-closed .eye-closed {
+  display: block;
+}
+
+/* --- Checkbox Label --- */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+
+/* --- Link Text --- */
+.link-text {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-size: var(--font-size-small);
+}
+
+/* --- Auth Footer --- */
+.auth-footer {
+  text-align: center;
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.auth-footer-text {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+  margin-right: var(--spacing-xs);
+}
+
+/* --- Auth Agreement --- */
+.auth-agreement {
+  margin-top: var(--spacing-lg);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: var(--font-size-small);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.auth-agreement .checkbox-label {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.auth-agreement .link-text {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* --- Register Page --- */
+.register-page .auth-form {
+  margin-bottom: 0;
+}
+
+.register-password-strength {
+  margin-top: var(--spacing-xs);
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.strength-bar {
+  flex: 1;
+  height: 4px;
+  background-color: var(--color-border-light);
+  border-radius: 2px;
+  transition: background-color var(--transition-fast);
+}
+
+.strength-bar.weak.active {
+  background-color: #f44336;
+}
+
+.strength-bar.medium.active {
+  background-color: #ff9800;
+}
+
+.strength-bar.strong.active {
+  background-color: #4caf50;
+}

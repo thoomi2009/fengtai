@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>我要留言 - 丰台内外贸一体化服务平台</title>
+  <link rel="stylesheet" href="static/css/common.css">
+  <link rel="stylesheet" href="static/css/page.css">
+</head>
+<body>
+  <header class="nav-bar">
+    <div class="nav-bar-content">
+      <a href="profile.html" class="nav-bar-back"></a>
+      <h1 class="nav-bar-title">我要留言</h1>
+    </div>
+  </header>
+
+  <main class="page">
+    <!-- Message Form -->
+    <div class="section-card">
+      <h2 class="section-title">我要留言</h2>
+      <form class="message-form" id="messageForm">
+        <div class="form-group">
+          <label class="form-label required">留言内容</label>
+          <textarea class="form-textarea" name="content" placeholder="请输入您的留言内容" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">提交留言</button>
+      </form>
+    </div>
+
+    <!-- Message History -->
+    <div class="history-section">
+      <h2 class="section-title" style="padding: 0 var(--spacing-lg); margin-bottom: var(--spacing-md);">我的留言</h2>
+      <div class="message-list">
+        <div class="message-item">
+          <div class="message-header">
+            <span class="message-time">2024-03-07 14:30</span>
+            <span class="message-status message-status-replied">已回复</span>
+          </div>
+          <div class="message-content">
+            <p class="message-text">请问补贴申请的具体流程是什么？需要准备哪些材料？</p>
+            <div class="message-reply">
+              <p class="reply-label">平台回复：</p>
+              <p class="reply-text">您好，关于补贴申请的详细流程和所需材料，请参考"补贴申请"页面的政策介绍。如有其他问题，欢迎随时咨询。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="message-item">
+          <div class="message-header">
+            <span class="message-time">2024-03-05 10:15</span>
+            <span class="message-status message-status-pending">待回复</span>
+          </div>
+          <div class="message-content">
+            <p class="message-text">建议增加更多关于东南亚市场的资讯内容。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="index.html" class="bottom-nav-item">
+      <svg class="bottom-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+        <polyline points="9,22 9,12 15,12 15,22"/>
+      </svg>
+      <span>首页</span>
+    </a>
+    <a href="news-list.html" class="bottom-nav-item">
+      <svg class="bottom-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
+      </svg>
+      <span>行业资讯</span>
+    </a>
+    <a href="services.html" class="bottom-nav-item">
+      <svg class="bottom-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+        <path d="M2 17l10 5 10-5"/>
+        <path d="M2 12l10 5 10-5"/>
+      </svg>
+      <span>出海服务</span>
+    </a>
+    <a href="classroom-list.html" class="bottom-nav-item">
+      <svg class="bottom-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+        <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+      </svg>
+      <span>出海课堂</span>
+    </a>
+    <a href="profile.html" class="bottom-nav-item active">
+      <svg class="bottom-nav-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+        <circle cx="12" cy="7" r="4"/>
+      </svg>
+      <span>个人中心</span>
+    </a>
+  </nav>
+</body>
+</html>
